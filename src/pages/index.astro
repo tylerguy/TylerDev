@@ -1,25 +1,33 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE}/>
-		<main>
-			<h1>Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <h1>Welcome!</h1>
+      <p>
+        Welcome to my Website, it's a bit empty at the moment but it will soon
+        be updated with more content including any projects I'm working on, my
+        blog and more. For now, here's a list of some of the things I'm working
+        on: - Studio game based around vehicle combat. - A 2d Arcade game - 3D
+        model of a suit of armor, animation and rigging. This is everything
+        academically, I'm also working on a few personal projects, including: -
+        This website you see here - Several discord bots (using discord.js) -
+        Experimenting with full stack web development (using react, node,
+        express, mongoDB) - A few other things I can't remember right now.
+        That's all for now, I'll update this page with more information soon.
+        Thanks for visiting!
+      </p>
+      <!-- <p>
 				This template comes with a few integrations already configured in your
 				<code>astro.config.mjs</code> file. You can customize your setup with
 				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
@@ -43,8 +51,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 					href="https://github.com/Charca/astro-blog-template"
 					>astro-blog-template
 				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+			</p> -->
+    </main>
+    <Footer />
+  </body>
 </html>
