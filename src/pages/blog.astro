@@ -10,11 +10,6 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
     new Date(b.frontmatter.pubDate).valueOf() -
     new Date(a.frontmatter.pubDate).valueOf()
 );
-
-// if no blog posts are found, return a 404 page
-if (posts.length === 0) {
-  throw new Error("404");
-}
 ---
 
 <!DOCTYPE html>
