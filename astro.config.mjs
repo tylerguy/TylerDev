@@ -5,6 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://tylerdev.me",
+  site: "https://tylerguy.github.io",
+  base: "/Tyler.dev",
   integrations: [mdx(), sitemap()],
 });
