@@ -86,3 +86,7 @@ blockquote {
 	height:100px;    
 	box-shadow: -5px 5px rgb(255 255 255 / 10%)
 }
+
+HeaderLink {
+	color: white;	
+}
