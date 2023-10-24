@@ -88,5 +88,6 @@ blockquote {
 }
 
 HeaderLink {
-	color: white;	
+	color: white;
+	font-weight: bold;
 }
