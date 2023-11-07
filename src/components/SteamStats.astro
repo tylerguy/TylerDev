@@ -1,9 +1,4 @@
 ---
-import { load } from '@astro/types';
-import { json } from '@astro/types';
-import { ref } from '@astro/types';
-import { timestamp } from '@astro/types';
-
 const apiKey = '63FFCE972386F2FAE3A524382D647460';
 const steamId = '76561198380134304';
 
@@ -21,17 +16,12 @@ let playedGames = ref(games);
     </tr>
   </thead>
   <tbody>
-    <script>
-      for (let i = 0; i < playedGames.length; i++) {
-        const game = playedGames[i];
-        // Generate a table row for each game
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td>${game.name}</td>
-          <td>${game.playtime_forever}</td>
-        `;
-        document.querySelector('tbody').appendChild(row);
-      }
-    </script>
+    <!-- Use JavaScript template literal to generate table rows -->
+    ${playedGames.map((game) => `
+      <tr>
+        <td>${game.name}</td>
+        <td>${game.playtime_forever}</td>
+      </tr>
+    `).join('')}
   </tbody>
 </table>
