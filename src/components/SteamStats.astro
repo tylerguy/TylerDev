@@ -1,32 +1,35 @@
----
-import { load } from 'astro/@types';
-import { json } from 'astro/@types';
-import { ref } from 'astro/@types';
-import { timestamp } from 'astro/@types';
-
+// Replace 'YOUR_API_KEY' with your Steam Web API Key
 const apiKey = '63FFCE972386F2FAE3A524382D647460';
-const steamId = '76561198380134304';
+const steamId = '76561198380134304'; // Replace with the user's Steam ID
 
-const { response: { games } } = await load(`https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=${apiKey}&steamid=${steamId}&format=json`);
+// Create a function to fetch the user's played games
+function getPlayedGames() {
+  fetch(`https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=${apiKey}&steamid=${steamId}&format=json`)
+    .then(response => response.json())
+    .then(data => {
+      const games = data.response.games;
 
-let playedGames = ref(games);
+      // Create an HTML table and populate it with the game data
+      const table = document.createElement('table');
+      table.innerHTML = `
+        <tr>
+          <th>Game Name</th>
+          <th>Playtime (minutes)</th>
+        </tr>
+      `;
+      
+      for (const game of games) {
+        const row = table.insertRow();
+        row.innerHTML = `
+          <td>${game.name}</td>
+          <td>${game.playtime_forever}</td>
+        `;
+      }
 
----
+      // Append the table to the document
+      document.body.appendChild(table);
+    })
+    .catch(error => console.error(error));
+}
 
-<table>
-  <thead>
-    <tr>
-      <th>Game Name</th>
-      <th>Playtime (minutes)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Use JavaScript template literal to generate table rows -->
-    ${playedGames.map((game) => `
-      <tr>
-        <td>${game.name}</td>
-        <td>${game.playtime_forever}</td>
-      </tr>
-    `).join('')}
-  </tbody>
-</table>
+getPlayedGames();
