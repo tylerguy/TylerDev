@@ -22,7 +22,15 @@ fetchData();
   </thead>
   <tbody>
     <script>
-      games.forEach(game => {
+      // Store the 'games' data as a JSON string in a data attribute.
+      const gamesData = JSON.stringify(games);
+      const tableBody = document.querySelector('tbody');
+      
+      // Parse the JSON data back to an array.
+      const gamesArray = JSON.parse(gamesData);
+      
+      // Iterate through the games array and build the table rows.
+      gamesArray.forEach(game => {
         const row = document.createElement('tr');
         const nameCell = document.createElement('td');
         const playtimeCell = document.createElement('td');
@@ -33,7 +41,7 @@ fetchData();
         row.appendChild(nameCell);
         row.appendChild(playtimeCell);
 
-        document.querySelector('tbody').appendChild(row);
+        tableBody.appendChild(row);
       });
     </script>
   </tbody>
