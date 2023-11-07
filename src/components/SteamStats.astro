@@ -4,8 +4,8 @@ import { json } from '@astro/types';
 import { ref } from '@astro/types';
 import { timestamp } from '@astro/types';
 
-const apiKey = 'YOUR_API_KEY';
-const steamId = 'STEAM_USER_ID';
+const apiKey = '63FFCE972386F2FAE3A524382D647460';
+const steamId = '76561198380134304';
 
 const { response: { games } } = await load(`https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=${apiKey}&steamid=${steamId}&format=json`);
 
