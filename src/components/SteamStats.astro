@@ -21,11 +21,17 @@ let playedGames = ref(games);
     </tr>
   </thead>
   <tbody>
-    {#each playedGames as game (game.appid)}
-      <tr>
-        <td>{game.name}</td>
-        <td>{game.playtime_forever}</td>
-      </tr>
-    {/each}
+    <script>
+      for (let i = 0; i < playedGames.length; i++) {
+        const game = playedGames[i];
+        // Generate a table row for each game
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${game.name}</td>
+          <td>${game.playtime_forever}</td>
+        `;
+        document.querySelector('tbody').appendChild(row);
+      }
+    </script>
   </tbody>
 </table>
