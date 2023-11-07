@@ -21,13 +21,17 @@ let playedGames = ref(games);
     </tr>
   </thead>
   <tbody>
-    <div>
-      {#each playedGames as game (game.appid)}
+    {#if playedGames.length > 0}
+      {#each playedGames as game}
         <tr>
           <td>{game.name}</td>
           <td>{game.playtime_forever}</td>
         </tr>
       {/each}
-    </div>
+    {:else}
+      <tr>
+        <td colspan="2">No games found</td>
+      </tr>
+    {/if}
   </tbody>
 </table>
