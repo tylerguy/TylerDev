@@ -24,7 +24,7 @@ class GameTable extends Component {
         <table>
           <thead>
             <tr>
-              <th>App ID</th>
+              <th>Icon</th>
               <th>Name</th>
               <th>Playtime</th>
             </tr>
@@ -32,7 +32,7 @@ class GameTable extends Component {
           <tbody>
             {games.map((game) => (
               <tr key={game.appid}>
-                <td>{game.appid}</td>
+                <td>http://media.steampowered.com/steamcommunity/public/images/apps/{game.appid}/{game.img_icon_url}.jpg</td>
                 <td>{game.name}</td>
                 <td>{game.playtime_forever}</td>
               </tr>
