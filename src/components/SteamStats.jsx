@@ -26,7 +26,7 @@ class GameTable extends Component {
             <tr>
               <th>App ID</th>
               <th>Name</th>
-              <th>Playtime Forever</th>
+              <th>Playtime</th>
             </tr>
           </thead>
           <tbody>
