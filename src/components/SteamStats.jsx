@@ -10,7 +10,7 @@ class GameTable extends Component {
 
   componentDidMount() {
     // You can replace this URL with the actual API endpoint to fetch your data
-    fetch('http://158.220.99.48:3000/')
+    fetch('https://steam.tylerdev.space/')
       .then((response) => response.json())
       .then((data) => this.setState({ games: data }));
   }
