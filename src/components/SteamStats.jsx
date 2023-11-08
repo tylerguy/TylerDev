@@ -32,7 +32,7 @@ class GameTable extends Component {
           <tbody>
             {games.map((game) => (
               <tr key={game.appid}>
-                <td><img src="http://media.steampowered.com/steamcommunity/public/images/apps/{game.appid}/{game.img_icon_url}.jpg" alt="{game.name}"></img></td>
+                <td><img src=`http://media.steampowered.com/steamcommunity/public/images/apps/${game.appid}/${game.img_icon_url}.jpg` alt=`${game.name}`></img></td>
                 <td>{game.name}</td>
                 <td>{game.playtime_forever}</td>
               </tr>
