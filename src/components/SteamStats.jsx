@@ -36,7 +36,7 @@ class GameTable extends Component {
                    <img src={`http://media.steampowered.com/steamcommunity/public/images/apps/${game.appid}/${game.img_icon_url}.jpg`} alt={game.name} />
                 </td>
                 <td>{game.name}</td>
-                <td>{game.playtime_forever / 60}</td>
+                <td>{Math.round(((game.playtime_forever / 60) + Number.EPSILON) * 100) / 100}</td>
               </tr>
             ))}
           </tbody>
