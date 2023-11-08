@@ -26,7 +26,7 @@ class GameTable extends Component {
             <tr>
               <th>Icon</th>
               <th>Name</th>
-              <th>Playtime</th>
+              <th>Playtime (Hours)</th>
             </tr>
           </thead>
           <tbody>
@@ -36,7 +36,7 @@ class GameTable extends Component {
                    <img src={`http://media.steampowered.com/steamcommunity/public/images/apps/${game.appid}/${game.img_icon_url}.jpg`} alt={game.name} />
                 </td>
                 <td>{game.name}</td>
-                <td>{game.playtime_forever}</td>
+                <td>{game.playtime_forever / 60}</td>
               </tr>
             ))}
           </tbody>
