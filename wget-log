@@ -1,0 +1,6 @@
+--2023-11-07 22:17:59--  http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=63FFCE972386F2FAE3A524382D647460
+Resolving api.steampowered.com (api.steampowered.com)... 23.54.132.227
+Connecting to api.steampowered.com (api.steampowered.com)|23.54.132.227|:80... connected.
+HTTP request sent, awaiting response... 400 Bad Request
+2023-11-07 22:18:00 ERROR 400: Bad Request.
+
