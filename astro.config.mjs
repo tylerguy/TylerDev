@@ -8,7 +8,13 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: "https://tylerdev.space",
-  integrations: [mdx(), sitemap(), react()],
+  integrations: [mdx(), sitemap(), react(), 
+                partytown({
+			config: {
+			  forward: ["dataLayer.push"],
+			},
+		}),
+                 ],
   build: {
     rollupOptions: {
       external: ["@astro/types"] // Add "@astro/types" to the external modules
