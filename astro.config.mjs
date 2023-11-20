@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
+import partytown from '@astrojs/partytown'
 
 // https://astro.build/config
 import react from "@astrojs/react";
