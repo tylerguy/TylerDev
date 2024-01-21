@@ -19,11 +19,6 @@ export default defineConfig({
       forward: ["dataLayer.push"]
     }
   }), compress()],
-  build: {
-    rollupOptions: {
-      external: ["@astro/types"] // Add "@astro/types" to the external modules
-    }
-  },
   output: 'hybrid',
   adapter: vercel({
     edgeMiddleware: true,
