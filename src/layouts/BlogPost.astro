@@ -2,7 +2,6 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Comments from "../components/Comments.astro";
 
 export interface Props {
 	content: {
@@ -60,7 +59,6 @@ const {
 				<hr/>
 				<slot />
 			</article>
-			<Comments />
 		</main>
 			<Footer />
 	</body>
