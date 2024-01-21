@@ -10,7 +10,7 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
     new Date(b.frontmatter.pubDate).valueOf() -
     new Date(a.frontmatter.pubDate).valueOf()
 );
-export const prerender = false;
+export const prerender = true;
 ---
 
 <!DOCTYPE html>
