@@ -19,7 +19,7 @@ export default defineConfig({
       forward: ["dataLayer.push"]
     }
   }), compress()],
-  output: 'hybrid',
+ // output: 'hybrid',
 /*  adapter: vercel({
     edgeMiddleware: true,
   }), */
