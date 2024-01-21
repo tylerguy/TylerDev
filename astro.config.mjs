@@ -2,13 +2,14 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import partytown from '@astrojs/partytown';
-import vercel from '@astrojs/vercel/serverless';
+import vercelServerless from '@astrojs/vercel/serverless';
 
-// https://astro.build/config
 import react from "@astrojs/react";
 
 // https://astro.build/config
 import compress from "astro-compress";
+
+// https://astro.build/config
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,5 +25,5 @@ export default defineConfig({
     }
   },
   output: 'server',
-    adapter: vercel(),
+  adapter: vercelServerless()
 });
