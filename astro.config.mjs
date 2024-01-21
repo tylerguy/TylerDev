@@ -20,7 +20,7 @@ export default defineConfig({
     }
   }), compress()],
   output: 'hybrid',
-  adapter: vercel({
+/*  adapter: vercel({
     edgeMiddleware: true,
-  }),
+  }), */
 });
