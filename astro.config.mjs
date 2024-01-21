@@ -2,6 +2,7 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import partytown from '@astrojs/partytown';
+import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 import react from "@astrojs/react";
@@ -21,5 +22,7 @@ export default defineConfig({
     rollupOptions: {
       external: ["@astro/types"] // Add "@astro/types" to the external modules
     }
-  }
+  },
+  output: 'server',
+    adapter: vercel(),
 });
