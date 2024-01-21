@@ -24,6 +24,8 @@ export default defineConfig({
       external: ["@astro/types"] // Add "@astro/types" to the external modules
     }
   },
-  output: 'server',
-  adapter: vercelServerless()
+  output: 'hybrid',
+  adapter: vercel({
+    edgeMiddleware: true,
+  }),
 });
