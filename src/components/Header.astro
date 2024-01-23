@@ -1,6 +1,9 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../config';
+import { FaXTwitter } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 ---
 
 <header>
@@ -10,15 +13,29 @@ import { SITE_TITLE } from '../config';
 	<h2>
 		{SITE_TITLE}
 	</h2>
-	<nav>
+	<nav id="Main-Header">
 		<HeaderLink href="/">Home</HeaderLink>
 		<HeaderLink href="/blog">Blog</HeaderLink>
 		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/tylerguy123" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/tylerguy" target="_blank">GitHub</HeaderLink>
+	</nav>
+	<nav>
+		<a href="https://twitter.com/tylerguy123">
+			<FaXTwitter />
+		</a>
+		<a href="https://github.com/tylerguy">
+			<FaGithub />
+		</a>
+		<a href="mailto:tyler@tylerdev.space">
+			<IoIosMail />
+		</a>
+		
+			
+				
+			
 	</nav>
 </header>
 <style>
+	
 	header {
 		margin: 0em 0 2em;
 	}
