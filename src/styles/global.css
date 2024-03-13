@@ -6,11 +6,23 @@
  @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
+@media only screen and (max-width: 600px) {
+	body {
+		max-width: 100%;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	body {
+		max-width: 65ch;
+	}
+}
+
+
 body {
 	font-family: 'Source Code Pro', monospace;
 	margin: auto;
 	padding: 20px;
-	max-width: 65ch;
 	text-align: left;
 	background-color: #282A36;
 	word-wrap: break-word;
