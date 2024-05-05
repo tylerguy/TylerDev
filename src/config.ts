@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = 'TylerDev';
 export const SITE_DESCRIPTION = 'My Personal Portfolio and Blog';
+export const HEADER_COLOR = ''
