@@ -1,47 +1,76 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../config';
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../config";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import siteIcon from "../assets/favicon.ico";
 ---
 
 <header>
-	<a href="/">
-	<img src = "/favicon.ico" id="favicon"/>
-	</a>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav id="Main-Header">
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-	</nav>
-	<nav id="Social-Header">
-		<a href="https://twitter.com/tylerguy123" id="social-link">
-			<FaXTwitter />
-		</a>
-		<a href="https://github.com/tylerguy" id="social-link">
-			<FaGithub />
-		</a>
-		<a href="mailto:tyler@tylerdev.space" id="social-link">
-			<IoIosMail />
-		</a>
-	</nav>
+  <a href="/">
+    <img src={siteIcon} alt="site icon" id="favicon" />
+  </a>
+  <h1>
+    {SITE_TITLE}
+  </h1>
+  <nav id="Main-Header">
+    <HeaderLink href="/">Home</HeaderLink>
+    <HeaderLink href="/blog">Blog</HeaderLink>
+  </nav>
+  <nav id="Social-Header">
+    <a href="https://twitter.com/tylerguy123" id="social-link">
+      <FaXTwitter />
+    </a>
+    <a href="https://github.com/tylerguy" id="social-link">
+      <FaGithub />
+    </a>
+    <a href="mailto:tyler@tylerdev.space" id="social-link">
+      <IoIosMail />
+    </a>
+  </nav>
 </header>
 <style>
-	
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
-        #Social-Header {
-                margin-top: 0.5em;
-        }
-        #social-link {
-		color: white;
-		text-decoration: none;
-	}
+  header {
+    margin: 0em 0 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  img:hover {
+    cursor: pointer;
+  }
+  h1 {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 2em;
+    color: #ffb86c;
+  }
+  #Social-Header {
+    margin-top: 0.5em;
+  }
+  #social-link {
+    color: white;
+    text-decoration: none;
+  }
+
+  #Main-Header {
+    margin: 0.5em 0;
+  }
+
+  #Social-Header {
+    margin: 0.5em 0;
+  }
+
+  svg {
+    font-size: 1.2em;
+    margin: 0 0em;
+  }
 </style>
