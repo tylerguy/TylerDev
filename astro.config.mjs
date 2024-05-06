@@ -3,7 +3,6 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import partytown from "@astrojs/partytown";
 import react from "@astrojs/react";
-import compress from "astro-compress";
 
 export default defineConfig({
   site: "https://tylerdev.space",
@@ -16,6 +15,5 @@ export default defineConfig({
         forward: ["dataLayer.push"],
       },
     }),
-    compress(),
   ],
 });

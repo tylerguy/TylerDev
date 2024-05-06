@@ -13,13 +13,13 @@
 
 @media only screen and (min-width: 600px) {
   body {
-    max-width: 65ch;
+    max-width: 100ch;
   }
 }
 
 body {
   font-family: "Source Code Pro", monospace;
-  margin: auto;
+  margin: 0 auto;
   padding: 20px;
   text-align: left;
   background-color: #282a36;
@@ -28,11 +28,6 @@ body {
   line-height: 1.5;
   color: #fff;
 }
-h1 {
-  font-size: 2.5em;
-  color: #ffb86c;
-}
-
 h2 {
   font-size: 1.5em;
   color: #ffb86c;
