@@ -3,41 +3,40 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
- @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
- @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Modak&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
 
 @media only screen and (max-width: 600px) {
-	body {
-		max-width: 100%;
-	}
+  body {
+    max-width: 100%;
+  }
 }
 
 @media only screen and (min-width: 600px) {
-	body {
-		max-width: 65ch;
-	}
+  body {
+    max-width: 65ch;
+  }
 }
-
 
 body {
-	font-family: 'Source Code Pro', monospace;
-	margin: auto;
-	padding: 20px;
-	text-align: left;
-	background-color: #282A36;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	line-height: 1.5;
-	color: #fff;
+  font-family: "Source Code Pro", monospace;
+  margin: auto;
+  padding: 20px;
+  text-align: left;
+  background-color: #282a36;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  color: #fff;
 }
 h1 {
-	font-size: 2.5em;
-	color: #FFB86C;
+  font-size: 2.5em;
+  color: #ffb86c;
 }
 
 h2 {
-	font-size: 1.5em;
-	color: #FFB86C
+  font-size: 1.5em;
+  color: #ffb86c;
 }
 
 h3,
@@ -46,51 +45,51 @@ h5,
 h6,
 strong,
 b {
-	color: white;
+  color: white;
 }
 a {
-	color: #8BE9FD;
+  color: #8be9fd;
 }
 nav a {
-	margin-right: 10px;
+  margin-right: 10px;
 }
 textarea {
-	width: 100%;
-	font-size: 16px;
+  width: 100%;
+  font-size: 16px;
 }
 input {
-	font-size: 16px;
+  font-size: 16px;
 }
 content {
-	line-height: 1.6;
+  line-height: 1.6;
 }
 table {
-	width: 100%;
+  width: 100%;
 }
 img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 code {
-	padding: 2px 5px;
-	background-color: #44475A;
+  padding: 2px 5px;
+  background-color: #44475a;
 }
 pre {
-	padding: 1rem;
+  padding: 1rem;
 }
 pre > code {
-	all: unset;
+  all: unset;
 }
 blockquote {
-	border: 1px solid #999;
-	color: #222;
-	padding: 2px 0px 2px 20px;
-	margin: 0px;
-	font-style: italic;
+  border: 1px solid #999;
+  color: #222;
+  padding: 2px 0px 2px 20px;
+  margin: 0px;
+  font-style: italic;
 }
 
 #favicon {
-	width:100px;
-	height:100px;    
-	box-shadow: -5px 5px rgb(255 255 255 / 10%)
+  width: 100px;
+  height: 100px;
+  box-shadow: -5px 5px rgb(255 255 255 / 10%);
 }
