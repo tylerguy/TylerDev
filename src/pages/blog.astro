@@ -13,14 +13,13 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 export const prerender = true;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <script
       type="text/partytown"
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-TC8FZQTN5J"
-    ></script>
+      src="https://www.googletagmanager.com/gtag/js?id=G-TC8FZQTN5J"></script>
     <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
