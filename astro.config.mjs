@@ -5,7 +5,7 @@ import partytown from "@astrojs/partytown";
 import react from "@astrojs/react";
 
 export default defineConfig({
-  site: "https://tylerdev.space",
+  site: "https://staging.tylerdev.space",
   integrations: [
     mdx(),
     sitemap(),
