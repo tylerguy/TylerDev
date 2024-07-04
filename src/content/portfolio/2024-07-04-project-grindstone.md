@@ -10,7 +10,6 @@ screenshots:
     alt: a
   - url: /portfolio/Screenshot 2024-07-04 122958.png
     alt: b
-    description: "[TBA]"
   - url: /portfolio/Screenshot 2024-07-04 123018.png
     alt: c
   - url: /portfolio/Screenshot 2024-07-04 123035.png
