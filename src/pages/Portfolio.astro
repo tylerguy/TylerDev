@@ -26,7 +26,7 @@ const allPosts = await getCollection("portfolio");
                 );
               } else {
                 return (
-                  <img src={post.data.image.url} alt={post.data.image.alt} />
+                  <img src=`${post.data.image.url}` alt={post.data.image.alt} />
                 );
               }
             }}
