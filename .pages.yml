@@ -56,10 +56,6 @@ content:
             label: Alt
             description: The alt text of the screenshot
             type: text
-          - name: description
-            label: Description
-            description: The description of the screenshot
-            type: text
   # - name: about
   #   label: About
   #   path: src/content/about/about.md
