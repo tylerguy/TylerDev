@@ -7,13 +7,13 @@ const portfolioCollection = defineCollection({
       title: z.string(),
       description: z.string(),
       image: z.object({
-        url: image(),
+        url: z.string(),
         alt: z.string(),
       }),
       link: z.string(),
       screenshots: z.array(
         z.object({
-          url: image(),
+          url: z.string(),
           alt: z.string(),
         })
       ),

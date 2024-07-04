@@ -1,12 +1,9 @@
 ---
 const { frontmatter } = Astro.props;
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import Layout from "./Layout.astro";
 ---
 
-<Layout title={frontmatter.title}>
+<Layout>
   <div class="header">
     <h1>{frontmatter.title}</h1>
     <div id="header-grid">
@@ -14,39 +11,8 @@ import Layout from "./Layout.astro";
         <h3>{frontmatter.description}</h3>
         <slot />
       </div>
-      <iframe
-        width="560"
-        height="315"
-        src={frontmatter.trailer}
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen></iframe>
     </div>
-    <a href={frontmatter.link}>Download Here</a>
-  </div>
-  <div class="content">
-    <div id="date">
-      <p id="heading">Release Date</p>
-      <p>{frontmatter.date_created}</p>
-    </div>
-    <div id="roles">
-      <p id="heading">Roles</p>
-      <p>{frontmatter.roles}</p>
-    </div>
-    <div id="platform">
-      <p id="heading">Platform</p>
-      <p>{frontmatter.platform}</p>
-    </div>
-    <div id="engine">
-      <p id="heading">Engine</p>
-      <p>{frontmatter.engine}</p>
-    </div>
-    <div id="genres">
-      <p id="heading">Genres</p>
-      <p>{frontmatter.genre}</p>
-    </div>
+    <a href={frontmatter.link}>View Here</a>
   </div>
   <hr />
   <div id="gallery">
@@ -54,17 +20,20 @@ import Layout from "./Layout.astro";
     <!-- parse the screenshots array -->
     <div id="screenshots">
       {
-        frontmatter.screenshots.map((screenshot) => (
-          <div id="screenshot">
-            <img src={screenshot.url} alt={screenshot.alt} />
-            <p>{screenshot.description}</p>
-          </div>
-        ))
+        frontmatter.screenshots.map(
+          (screenshot: {
+            url: string | null | undefined;
+            alt: string | null | undefined;
+          }) => (
+            <div id="screenshot">
+              <img src={screenshot.url} alt={screenshot.alt} />
+            </div>
+          )
+        )
       }
     </div>
   </div>
 </Layout>
-<hr id="end" />
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap");
@@ -77,13 +46,12 @@ import Layout from "./Layout.astro";
   }
 
   .header {
-    text-align: center;
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    row-gap: 1rem;
+    font-family: "Source Code Pro", monospace;
+    padding: 20px 0;
+    margin: 0 2em;
   }
   h1 {
     margin: 0;
@@ -115,11 +83,6 @@ import Layout from "./Layout.astro";
     background-color: #ffffff43;
     margin: 0.5rem;
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.34);
-  }
-  #date {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
   p {
     margin: 0;
@@ -160,16 +123,10 @@ import Layout from "./Layout.astro";
   }
 
   img {
-    width: 100%;
-    height: auto;
+    width: 10px;
   }
 
   #end {
     margin-bottom: 2rem;
-  }
-
-  /* make the date div twice the width of the other grid elements */
-  #date {
-    grid-column: span 2;
   }
 </style>

@@ -4,20 +4,21 @@ export const prerender = false;
 ---
 
 <Layout title="TylerDev | Home">
-  <main>
-    <h2 style="text-align: center;">
-      Hey there, I'm Tyler. Former game design student and web design enthusiast
-    </h2>
-    <p>Some projects i've been apart of:</p>
-    <ul>
-      <li>
+  <div id="container">
+    <div id="content">
+      <h2 style="text-align: center;">
+        Hey there, I'm Tyler. Former game design student and web design
+        enthusiast
+      </h2>
+      <p>Some projects i've been apart of:</p>
+      <ul>
+        <li>
         Game/Level Designer for <a
           href="
   https:
   tylerguy123.itch.io
   the-investigation-tales"
-          >Investigation Tales, a proof of concept investigation game
-
+          />Investigation Tales, a proof of concept investigation game. </li>
           <li>
             UX + Sound Designer for <a
               href="https://lunar-panda-studios.itch.io/dead-on-arrival"
@@ -54,22 +55,33 @@ export const prerender = false;
             tmi.js
           </li>
         </ul>
-        <em
-          >Most of my ongoing projects are private, but this will likely change
-          in the future once they are ready</em
-        >
-      </li>
-    </ul>
-  </main>
+      </ul>
+      <em
+        >Most of my ongoing projects are private, but this will likely change in
+        the future once they are ready</em
+      >
+    </div>
+  </div>
 </Layout>
 
 <style>
-  main {
+  #container {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "Source Code Pro", monospace;
     padding: 20px 0;
-    margin: 0 2em;
+    margin: 0 auto;
+  }
+
+  #content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    margin: 0.5rem;
   }
 </style>
