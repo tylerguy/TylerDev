@@ -4,7 +4,8 @@ import Layout from "./Layout.astro";
 ---
 
 <Layout>
-  <div class="header">
+  <main>
+    <div class="header">
     <h1>{frontmatter.title}</h1>
     <div id="header-grid">
       <div id="description">
@@ -32,26 +33,34 @@ import Layout from "./Layout.astro";
         )
       }
     </div>
-  </div>
+</div>
+</main>
 </Layout>
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-
-  body {
-    background: #13151a;
-  }
-  * {
-    font-family: "Shantell Sans", cursive;
-  }
-
-  .header {
+  main {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "Source Code Pro", monospace;
     padding: 20px 0;
-    margin: 0 2em;
+    margin: 0 auto;
+    color: #cdd6f4;
+  }
+
+  * {
+    font-family: "Shantell Sans", cursive;
+  }
+
+  .header {
+    text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
   }
   h1 {
     margin: 0;
@@ -70,26 +79,9 @@ import Layout from "./Layout.astro";
   a {
     color: white;
   }
-  .content {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    margin-right: 2rem;
-    margin-left: 2rem;
-  }
-  .content div {
-    padding: 1rem;
-    background-color: #ffffff43;
-    margin: 0.5rem;
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.34);
-  }
   p {
     margin: 0;
     font-size: 16px;
-  }
-  #heading {
-    font-weight: bold;
   }
 
   hr {
@@ -99,34 +91,28 @@ import Layout from "./Layout.astro";
     border: 0;
     border-top: 1px solid #ccc;
   }
-  #gallery {
-    margin-top: 2rem;
-  }
 
   #screenshots {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 1rem;
-    margin: 0 5rem;
+    /* create a 2 wide grid */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
   }
 
   #header-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin: 0 5rem;
+    display: flex;
+    flex-direction: column;
   }
   #screenshot {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
   }
 
   img {
-    width: 10px;
+    width: 70%;
+    height: auto;
   }
-
-  #end {
-    margin-bottom: 2rem;
-  }
+</style>
 </style>
