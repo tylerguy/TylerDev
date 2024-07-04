@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+const allPosts = await getCollection("portfolio");
+---
+
+<Layout>
+  <div id="container">
+    <h1>Projects</h1>
+    <div id="projects">
+      <!-- Loop through all posts -->
+      {
+        allPosts.map((post) => (
+          <div
+            id="card"
+            onclick={`location.href='/portfolio/${post.slug}'`}
+            style="cursor: pointer;"
+          >
+            {() => {
+              if (!post.data.image) {
+                return (
+                  <img
+                    src="https://via.placeholder.com/300"
+                    alt="Placeholder image"
+                  />
+                );
+              } else {
+                return (
+                  <img src={post.data.image.url} alt={post.data.image.alt} />
+                );
+              }
+            }}
+            <h2>{post.data.title}</h2>
+            <p>{post.data.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

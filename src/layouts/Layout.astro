@@ -1,0 +1,92 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <ViewTransitions />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <slot />
+    <Footer />
+    <style is:global>
+      @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+      @media only screen and (max-width: 600px) {
+        body {
+          max-width: 100%;
+        }
+      }
+
+      @media only screen and (min-width: 600px) {
+        body {
+          max-width: 100%;
+        }
+      }
+
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
+      body {
+        font-family: "Source Code Pro", monospace;
+        margin: 0 auto;
+        min-height: 100vh;
+        /* padding: 20px 0; */
+        text-align: left;
+        background-color: #1e1e2e;
+        line-height: 1.5;
+        color: #cdd6f4;
+        scrollbar-width: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        color: #cdd6f4;
+      }
+
+      h3,
+      h4,
+      h5,
+      h6,
+      strong,
+      b {
+        color: white;
+      }
+
+      a {
+        color: #89b4fa;
+      }
+      nav a {
+        margin-right: 10px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      code {
+        padding: 2px 5px;
+        background-color: #44475a;
+      }
+
+      #favicon {
+        width: 100px;
+        height: 100px;
+        box-shadow: -5px 5px rgb(255 255 255 / 10%);
+      }
+    </style>
+  </body>
+</html>
