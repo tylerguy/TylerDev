@@ -1,33 +1,12 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import Layout from "../layouts/Layout.astro";
 export const prerender = false;
-import { ViewTransitions } from "astro:transitions";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <script
-      type="text/partytown"
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-TC8FZQTN5J"></script>
-    <script type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-TC8FZQTN5J");
-    </script>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header title={SITE_TITLE} />
-    <main>
-      <h2>
+<Layout title="TylerDev | Home">
+  <div id="container">
+    <div id="content">
+      <h2 style="text-align: center;">
         Hey there, I'm Tyler. Former game design student and web design
         enthusiast
       </h2>
@@ -35,9 +14,12 @@ import { ViewTransitions } from "astro:transitions";
       <ul>
         <li>
           Game/Level Designer for <a
-            href="https://tylerguy123.itch.io/the-investigation-tales"
+            href="
+  https:
+  tylerguy123.itch.io
+  the-investigation-tales"
             >Investigation Tales</a
-          >, a proof of concept for an investigation game
+          >, a proof of concept investigation game.
         </li>
         <li>
           UX + Sound Designer for <a
@@ -61,8 +43,8 @@ import { ViewTransitions } from "astro:transitions";
           adjustments were needed.
         </li>
       </ul>
-      <h2>Currently working on:</h2>
       <ul>
+        <p>Currently working on:</p>
         <li>Expanding my knowledge of ReactJS and full stack development.</li>
         <li>
           Maintainer of several repositories for <a
@@ -75,11 +57,32 @@ import { ViewTransitions } from "astro:transitions";
           tmi.js
         </li>
       </ul>
-      <em
-        >Most of my ongoing projects are private, but this will likely change in
-        the future once they are ready</em
-      >
-      <Footer />
-    </main>
-  </body>
-</html>
+    </div>
+    <em
+      >Most of my ongoing projects are private, but this will likely change in
+      the future once they are ready</em
+    >
+  </div>
+</Layout>
+
+<style>
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Source Code Pro", monospace;
+    padding: 20px 0;
+    margin: 0 auto;
+  }
+
+  #content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    margin: 0.5rem;
+  }
+</style>

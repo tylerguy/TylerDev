@@ -1,0 +1,120 @@
+media: public
+content:
+  - name: portfolio
+    label: Portfolio
+    path: src/content/portfolio
+    type: collection
+    fields:
+      - name: title
+        label: Title
+        description: The title of the portfolio item
+        type: text
+      - name: description
+        label: Description
+        description: The description of the portfolio item
+        type: rich-text
+      - name: body
+        label: Body
+        description: The body of the portfolio item
+        type: rich-text
+      - name: image
+        label: Image
+        description: The image of the portfolio item
+        type: object
+        fields:
+          - name: url
+            label: Source
+            description: The source of the image
+            type: image
+            options:
+              input: public/portfolio
+              output: /portfolio
+              path: public
+          - name: alt
+            label: Alt
+            description: The alt text of the image
+            type: text
+      - name: link
+        label: Link
+        description: The link where the portfolio item can be found
+        type: text
+      - name: screenshots
+        label: Screenshots
+        description: The screenshots of the portfolio item
+        type: object
+        list: true
+        fields:
+          - name: url
+            label: Source
+            description: The source of the screenshot
+            type: image
+            options:
+              input: public/portfolio
+              output: /portfolio
+              path: public
+          - name: alt
+            label: Alt
+            description: The alt text of the screenshot
+            type: text
+  # - name: about
+  #   label: About
+  #   path: src/content/about/about.md
+  #   type: file
+  #   fields:
+  #     - name: title
+  #       label: Title
+  #       description: The title of the about page
+  #       type: text
+  #     - name: body
+  #       label: Body
+  #       description: The body of the about page
+  #       type: rich-text
+  #     - name: skills
+  #       label: Skills
+  #       description: The skills of the about page
+  #       type: text
+  #       list: true
+  #       fields:
+  #         - name: skill
+  #           label: Skill
+  #           description: The skill of the about page
+  #           type: text
+  #     - name: Education
+  #       label: Education
+  #       description: The education of the about page
+  #       type: rich-text
+  # - name: config
+  #   label: Config
+  #   path: src/config.json
+  #   type: file
+  #   format: json
+  #   fields:
+  #     - name: title
+  #       label: Title
+  #       description: The title of the site
+  #       type: text
+  #     - name: email
+  #       label: Email
+  #       description: The email of the site
+  #       type: text
+  #     - name: linkedin
+  #       label: LinkedIn
+  #       description: The LinkedIn of the site
+  #       type: text
+  #     - name: cv
+  #       label: CV
+  #       description: The CV of the site
+  #       type: image
+  #       options:
+  #         input: public/content
+  #         output: /content
+  #         path: public/content
+  #         categories: document
+  #     - name: icon
+  #       label: Icon
+  #       description: The icon of the site
+  #       type: image
+  #       options:
+  #         input: public/content
+  #         output: /content
+  #         path: public/content

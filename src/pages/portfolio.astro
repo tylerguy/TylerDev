@@ -1,0 +1,85 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+const allPosts = await getCollection("portfolio");
+---
+
+<Layout>
+  <div id="container">
+    <h1>Projects</h1>
+    <div id="projects">
+      <!-- Loop through all posts -->
+      {
+        allPosts.map((post) => (
+          <div
+            id="card"
+            onclick={`location.href='/portfolio/${post.slug}'`}
+            style="cursor: pointer;"
+          >
+            {() => {
+              if (!post.data.image) {
+                return (
+                  <img
+                    src="https://via.placeholder.com/300"
+                    alt="Placeholder image"
+                  />
+                );
+              } else {
+                return (
+                  <img src=`${post.data.image.url}` alt={post.data.image.alt} />
+                );
+              }
+            }}
+            <h2>{post.data.title}</h2>
+            <p>{post.data.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
+
+<style>
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Source Code Pro", monospace;
+    padding: 20px 0;
+    margin: 0 auto;
+  }
+
+  #projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #card {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+  }
+
+  #card:hover {
+    scale: 1.1;
+    transition: 0.3s;
+  }
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  h2 {
+    margin-top: 1rem;
+    color: white;
+    text-align: center;
+  }
+
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  </style>
