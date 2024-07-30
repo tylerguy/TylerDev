@@ -1,6 +1,6 @@
 ---
 title: Infinite Care
-description: Website Design
+description: Web Design
 image:
   alt: Infinite Care logo
   url: /portfolio/infinite-care-vertical-logo.jpg
