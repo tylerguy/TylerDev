@@ -30,8 +30,10 @@ const allPosts = await getCollection("portfolio");
                 );
               }
             }}
-            <h2>{post.data.title}</h2>
-            <p>{post.data.description}</p>
+            <div id="card-content">
+              <h2>{post.data.title}</h2>
+              <p>{post.data.description}</p>
+            </div>
           </div>
         ))
       }
@@ -69,7 +71,7 @@ const allPosts = await getCollection("portfolio");
   }
   img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 5px;;
   }
 
   h2 {
@@ -81,5 +83,12 @@ const allPosts = await getCollection("portfolio");
   h1 {
     color: white;
     text-align: center;
+  }
+
+  #card-content {
+    /* postion card content at the bottom of the card */
+    display: block;
+    position: relative;
+    bottom: 0;
   }
   </style>

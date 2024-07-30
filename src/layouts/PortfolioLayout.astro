@@ -13,7 +13,7 @@ import Layout from "./Layout.astro";
           <slot />
         </div>
       </div>
-      <a href={frontmatter.link}>View Here</a>
+      {frontmatter.link ? <a href={frontmatter.link}>View Here</a> : null}
     </div>
     <hr />
     <div id="gallery">
