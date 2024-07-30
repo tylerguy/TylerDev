@@ -17,7 +17,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
   <main>
     <section>
-      <ul>
+      <!-- <ul>
         {
           posts.map((post) => (
             <li>
@@ -35,34 +35,36 @@ import Layout from "../layouts/Layout.astro";
             </li>
           ))
         }
-      </ul>
+      </ul> -->
+      <p style="font-size: 1.5em; text-align: center;">Coming soon...</p>
+        
     </section>
   </main>
+
+  <style>
+    ul {
+      list-style-type: none;
+      padding: unset;
+    }
+    ul li {
+      display: flex;
+    }
+    ul li time {
+      flex: 0 0 130px;
+      font-style: italic;
+      color: #595959;
+    }
+    ul li a:visited {
+      color: #8e32dc;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Source Code Pro", monospace;
+      padding: 20px 0;
+      margin: 0 auto;
+    }
+  </style>
 </Layout>
-
-<style>
-  ul {
-    list-style-type: none;
-    padding: unset;
-  }
-  ul li {
-    display: flex;
-  }
-  ul li time {
-    flex: 0 0 130px;
-    font-style: italic;
-    color: #595959;
-  }
-  ul li a:visited {
-    color: #8e32dc;
-  }
-
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Source Code Pro", monospace;
-    padding: 20px 0;
-    margin: 0 auto;
-  }
-</style>
