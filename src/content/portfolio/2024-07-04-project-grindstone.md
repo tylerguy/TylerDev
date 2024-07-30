@@ -4,6 +4,7 @@ description: Web Design/Marketing
 image:
   url: /portfolio/concept discord logo.png
   alt: Project Grindstone
+link: https://web.archive.org/web/20220928041811/https://projectgrindstone.net/
 screenshots:
   - url: /portfolio/Screenshot 2024-07-04 122927.png
     alt: Header/Main Content
