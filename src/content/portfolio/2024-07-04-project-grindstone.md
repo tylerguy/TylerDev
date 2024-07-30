@@ -2,7 +2,7 @@
 title: Project Grindstone
 description: Web Design/Marketing
 image:
-  url: /portfolio/CNF_CK_Obelus-City.jpg
+  url: /portfolio/concept discord logo.png
   alt: Project Grindstone
 link: https://web.archive.org/web/20220928041811/https://projectgrindstone.net/
 screenshots:
