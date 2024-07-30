@@ -25,6 +25,6 @@ Technologies/Tools Used:
     
 *   C++, used for [a one off terminal emulator](https://github.com/tylerguy/G-) that concluded a story arc
     
-*   [n8n.io,](https://n8n.io/) for automation between different api's and services, in this case mainly used for db updates and email automation.
+*   [n8n.io,](https://n8n.io/) for automation between different API's and services, in this case mainly used for db updates and email automation.
     
 *   Discord.js, mainly used for users to fetch progress on tasks completed on the website as well as provide a way to sign into the website using discord.
