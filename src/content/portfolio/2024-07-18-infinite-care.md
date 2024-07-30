@@ -4,7 +4,6 @@ description: Web Design
 image:
   alt: Infinite Care logo
   url: /portfolio/logo-square.png
-link: about:blank
 screenshots:
   - url: /portfolio/Screenshot 2024-07-30 093911.png
     alt: home page
