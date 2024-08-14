@@ -30,6 +30,7 @@ const allPosts = await getCollection("portfolio");
                 );
               }
             }}
+            <hr/>
             <div id="card-content">
               <h2>{post.data.title}</h2>
               <p>{post.data.description}</p>
@@ -63,15 +64,23 @@ const allPosts = await getCollection("portfolio");
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #313244;
+    transition: 0.5s;
   }
 
   #card:hover {
     scale: 1.1;
-    transition: 0.3s;
+    transition: 0.5s;;
+    border: 1px solid #fff;
   }
   img {
-    width: 100%;
-    border-radius: 5px;;
+    width: auto;
+    max-height: 200px;
+    border-radius: 5px;
   }
 
   h2 {
@@ -90,5 +99,13 @@ const allPosts = await getCollection("portfolio");
     display: block;
     position: relative;
     bottom: 0;
+    text-align: center;
+  }
+
+  hr {
+    border: 0;  
+    height: 1px;
+    background: #333;
+    margin: 1rem 0;
   }
   </style>
