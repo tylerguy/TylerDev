@@ -20,10 +20,19 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, "");
     text-decoration: none;
     color: white;
     font-size: 20px;
+    transition: all 0.25s;
   }
   a.active {
     font-weight: bolder;
     text-decoration: underline;
     color: #bd93f9;
+  }
+  a:hover {
+    color: #bd93f9;
+    transition:
+      transform 0.25s,
+      font-size 0.1s;
+    font-size: 25px;
+    transform: translate(5px, 0);
   }
 </style>

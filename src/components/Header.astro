@@ -9,7 +9,7 @@ import { IoDocumentTextSharp } from "react-icons/io5";
 import siteIcon from "../assets/favicon.ico";
 ---
 
-<header>
+<header data-header transition:persist>
   <a href="/">
     <img src={siteIcon} alt="site icon" id="favicon" />
   </a>
@@ -77,8 +77,16 @@ import siteIcon from "../assets/favicon.ico";
   #social-link {
     color: white;
     text-decoration: none;
+    transition: all 0.25s;
   }
 
+  #social-link:hover {
+    color: #bd93f9;
+    font-size: 25px;
+    transition:
+      font-size 0.25s,
+      color 0.1s;
+  }
   #Main-Header {
     margin: 0.5em 0;
     display: flex;

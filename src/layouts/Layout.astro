@@ -13,7 +13,7 @@ import { ViewTransitions } from "astro:transitions";
     <ViewTransitions />
   </head>
   <body>
-    <Header title={SITE_TITLE} />
+    <Header title={SITE_TITLE} data-header />
     <slot />
     <!-- <Footer /> -->
     <style is:global>
@@ -90,3 +90,26 @@ import { ViewTransitions } from "astro:transitions";
     </style>
   </body>
 </html>
+
+<script>
+  const header: any = document.querySelector("[data-header]");
+  const content: any = document.getElementById("container");
+
+  header.addEventListener("mouseover", () => {
+    header.style.backgroundColor = "#44475a";
+    header.style.minWidth = "250px";
+    header.style.transition = "all 0.5s";
+    header.style.boxShadow = "5px 0px rgb(255 255 255 / 10%)";
+    content.style.transition = "all 0.5s";
+    content.style.opacity = "0.5";
+  });
+
+  header.addEventListener("mouseout", () => {
+    header.style.backgroundColor = "#585b70";
+    header.style.minWidth = "200px";
+    header.style.transition = "all 0.5s";
+    header.style.boxShadow = "0px 0px rgb(255 255 255 / 10%)";
+    content.style.transition = "all 0.5s";
+    content.style.opacity = "1";
+  });
+</script>
