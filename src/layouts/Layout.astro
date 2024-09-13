@@ -93,23 +93,38 @@ import { ViewTransitions } from "astro:transitions";
 
 <script>
   const header: any = document.querySelector("[data-header]");
+
   const content: any = document.getElementById("container");
 
-  header.addEventListener("mouseover", () => {
+  function expandHeader() {
     header.style.backgroundColor = "#44475a";
     header.style.minWidth = "250px";
     header.style.transition = "all 0.5s";
     header.style.boxShadow = "5px 0px rgb(255 255 255 / 10%)";
     content.style.transition = "all 0.5s";
     content.style.opacity = "0.5";
-  });
+  }
 
-  header.addEventListener("mouseout", () => {
+  function shrinkHeader() {
     header.style.backgroundColor = "#585b70";
     header.style.minWidth = "200px";
     header.style.transition = "all 0.5s";
     header.style.boxShadow = "0px 0px rgb(255 255 255 / 10%)";
     content.style.transition = "all 0.5s";
     content.style.opacity = "1";
-  });
+  }
+
+  var delay = function (elem) {
+    var timeout: any = null;
+    elem.onmouseover = function () {
+      timeout = setTimeout(expandHeader, 250);
+    };
+
+    elem.onmouseout = function () {
+      clearTimeout(timeout);
+      shrinkHeader();
+    };
+  };
+
+  delay(document.querySelector("[data-header]"));
 </script>
