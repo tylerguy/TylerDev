@@ -116,7 +116,7 @@ import { ViewTransitions } from "astro:transitions";
 
   var delay = function (elem) {
     var timeout: any = null;
-    elem.onmouseover = function () {
+    elem.onmouseenter = function () {
       timeout = setTimeout(expandHeader, 250);
     };
 
