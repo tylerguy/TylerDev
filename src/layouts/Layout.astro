@@ -120,7 +120,7 @@ import { ViewTransitions } from "astro:transitions";
       timeout = setTimeout(expandHeader, 250);
     };
 
-    elem.onmouseout = function () {
+    elem.onmouseleave = function () {
       clearTimeout(timeout);
       shrinkHeader();
     };
