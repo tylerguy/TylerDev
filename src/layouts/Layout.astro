@@ -40,7 +40,7 @@ import { ViewTransitions } from "astro:transitions";
         min-height: 100vh;
         padding: 20px 0;
         text-align: left;
-        background-color: #1e1e2e;
+        background-color: #181825;
         line-height: 1.5;
         color: #cdd6f4;
         scrollbar-width: 0;
@@ -96,7 +96,7 @@ import { ViewTransitions } from "astro:transitions";
   const content: any = document.getElementById("container");
 
   function expandHeader() {
-    header.style.backgroundColor = "#44475a";
+    header.style.backgroundColor = "#45475a";
     header.style.minWidth = "250px";
     header.style.transition = "all 0.5s";
     header.style.boxShadow = "5px 0px rgb(255 255 255 / 10%)";
@@ -105,7 +105,7 @@ import { ViewTransitions } from "astro:transitions";
   }
 
   function shrinkHeader() {
-    header.style.backgroundColor = "#585b70";
+    header.style.backgroundColor = "#313244";
     header.style.minWidth = "200px";
     header.style.transition = "all 0.5s";
     header.style.boxShadow = "0px 0px rgb(255 255 255 / 10%)";
