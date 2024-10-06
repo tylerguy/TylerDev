@@ -1,4 +1,4 @@
-media: src/content
+media: src/content/media
 content:
   - name: portfolio
     label: Portfolio
@@ -27,8 +27,8 @@ content:
             description: The source of the image
             type: image
             options:
-              input: src/assets/portfolio/media
-              output: ./media
+              input: src/assets/content/media
+              output: ../media
               path: src/assets
           - name: alt
             label: Alt
@@ -49,8 +49,8 @@ content:
             description: The source of the screenshot
             type: image
             options:
-              input: src/assets/portfolio/media
-              output: ./media
+              input: src/assets/content/media
+              output: ../media
               path: src/assets
           - name: alt
             label: Alt

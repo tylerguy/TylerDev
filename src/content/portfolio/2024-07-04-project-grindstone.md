@@ -2,17 +2,17 @@
 title: Project Grindstone
 description: Web Design/Marketing
 image:
-  url: "./media/concept discord logo.png"
+  url: "../media/concept discord logo.png"
   alt: Project Grindstone
 link: https://web.archive.org/web/20220928041811/https://projectgrindstone.net/
 screenshots:
-  - url: ./media/Screenshot 2024-07-04 122927.png
+  - url: ../media/Screenshot 2024-07-04 122927.png
     alt: Header/Main Content
-  - url: ./media/Screenshot 2024-07-04 122958.png
+  - url: ../media/Screenshot 2024-07-04 122958.png
     alt: Description Section
-  - url: ./media/Screenshot 2024-07-04 123018.png
+  - url: ../media/Screenshot 2024-07-04 123018.png
     alt: Department Descriptions
-  - url: ./media/Screenshot 2024-07-04 123035.png
+  - url: ../media/Screenshot 2024-07-04 123035.png
     alt: Footer/Engagement Section
 ---
 Project Grindstone was an ARG (Alternate Reality Game) with heavy fantasy/supernatural themes. Throughout my time on the project, I was responsible for maintaining and adding content to the website for use in user engagement and promotion of the project to a wider audience. During my time on the team, I transformed the functionality of the website to include more automation and improved user experience. Alongside my web design responsibilities, I also had a hand in setting up ads and tracking their impact on growth of the userbase as well as sending out regular emails to inform users of any new content to engage with.
