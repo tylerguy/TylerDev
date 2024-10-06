@@ -17,6 +17,10 @@
   }
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 html,
 body {
   height: 100%;
@@ -29,12 +33,17 @@ body::-webkit-scrollbar {
 body {
   font-family: "Source Code Pro", monospace;
   margin: 0 auto;
-  /* padding: 20px 0; */
+  min-height: 100vh;
+  padding: 20px 0;
   text-align: left;
-  background-color: #1e1e2e;
+  background-color: #181825;
   line-height: 1.5;
   color: #cdd6f4;
   scrollbar-width: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 h2 {
