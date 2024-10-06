@@ -1,6 +1,7 @@
 ---
 const { frontmatter } = Astro.props;
 import Layout from "./Layout.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
@@ -31,7 +32,7 @@ import Layout from "./Layout.astro";
                 alt: string | null | undefined;
               }) => (
                 <div id="screenshot">
-                  <img src={screenshot.url} alt={screenshot.alt} />
+                  <Image src={screenshot.url} alt={screenshot.alt} />
                 </div>
               )
             )

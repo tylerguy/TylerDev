@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 const allPosts = await getCollection("portfolio");
+import { Image } from "astro:assets";
 ---
 
 <Layout>
@@ -26,7 +27,7 @@ const allPosts = await getCollection("portfolio");
                 );
               } else {
                 return (
-                  <img src=`${post.data.image.url}` alt={post.data.image.alt} />
+                  <Image src={post.data.image.url} alt={post.data.image.alt} />
                 );
               }
             }}

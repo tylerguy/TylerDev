@@ -1,4 +1,4 @@
-media: public
+media: src/content
 content:
   - name: portfolio
     label: Portfolio
@@ -27,9 +27,9 @@ content:
             description: The source of the image
             type: image
             options:
-              input: public/portfolio
-              output: /portfolio
-              path: public
+              input: src/assets/portfolio/media
+              output: ./media
+              path: src/assets
           - name: alt
             label: Alt
             description: The alt text of the image
@@ -49,9 +49,9 @@ content:
             description: The source of the screenshot
             type: image
             options:
-              input: public/portfolio
-              output: /portfolio
-              path: public
+              input: src/assets/portfolio/media
+              output: ./media
+              path: src/assets
           - name: alt
             label: Alt
             description: The alt text of the screenshot
