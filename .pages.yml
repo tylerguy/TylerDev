@@ -3,7 +3,7 @@ content:
   - name: portfolio
     label: Portfolio
     path: src/content/portfolio
-    exclude: [""*.png"]
+    exclude: [*.png]
     type: collection
     fields:
       - name: title
