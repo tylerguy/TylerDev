@@ -37,7 +37,6 @@ import Layout from "../layouts/Layout.astro";
         }
       </ul> -->
       <p style="font-size: 1.5em; text-align: center;">Coming soon...</p>
-        
     </section>
   </main>
 
@@ -57,14 +56,21 @@ import Layout from "../layouts/Layout.astro";
     ul li a:visited {
       color: #8e32dc;
     }
-
     main {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       font-family: "Source Code Pro", monospace;
       padding: 20px 0;
       margin: 0 auto;
+      height: 100%;
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   </style>
 </Layout>

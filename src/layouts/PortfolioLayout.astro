@@ -15,11 +15,11 @@ import { Image } from "astro:assets";
           </div>
         </div>
 
-      <div id="article">
-        <slot />
-        {frontmatter.link ? <a href={frontmatter.link}>View Here</a> : null}
+        <div id="article">
+          <slot />
+          {frontmatter.link ? <a href={frontmatter.link}>View Here</a> : null}
+        </div>
       </div>
-    </div>
 
       <div id="gallery">
         <h2>Screenshots</h2>
@@ -27,10 +27,7 @@ import { Image } from "astro:assets";
         <div id="screenshots">
           {
             frontmatter.screenshots.map(
-              (screenshot: {
-                url: string | null | undefined;
-                alt: string | null | undefined;
-              }) => (
+              (screenshot: { url: string; alt: string }) => (
                 <div id="screenshot">
                   <Image src={screenshot.url} alt={screenshot.alt} />
                 </div>
@@ -49,11 +46,39 @@ import { Image } from "astro:assets";
       align-items: center;
       color: #cdd6f4;
       height: 100%;
-      overflow: scroll;
     }
 
     #container {
       display: flex;
+    }
+
+    @media only screen and (min-width: 600px) {
+      #container {
+        flex-direction: row;
+      }
+
+      #content {
+        padding: 10px;
+      }
+
+      main {
+        overflow: scroll;
+      }
+
+      #screenshots {
+        padding: 20px;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      #container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      content {
+        padding: 0;
+      }
     }
 
     #container > * {
@@ -63,7 +88,6 @@ import { Image } from "astro:assets";
       text-align: center;
       display: flex;
       flex-direction: column;
-      padding: 10px;
       border-right: 1px solid #cdd6f4;
     }
 
@@ -104,7 +128,6 @@ import { Image } from "astro:assets";
       justify-content: center;
       align-items: center;
       width: 400px;
-      padding: 20px;
     }
     #screenshot {
       display: flex;

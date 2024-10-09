@@ -8,22 +8,44 @@
 @media only screen and (max-width: 600px) {
   body {
     max-width: 100%;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    justify-content: top;
+    align-items: top;
+  }
+
+  html,
+  body {
+    height: 100%;
   }
 }
 
 @media only screen and (min-width: 600px) {
   body {
     max-width: 100%;
+    flex-direction: row;
+    min-height: 100vh;
+    height: 100%;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
   }
-}
 
-body::-webkit-scrollbar {
-  display: none;
+  html,
+  body {
+    height: 100%;
+  }
 }
 
 html,
 body {
-  height: 100%;
+  margin: 0 auto;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 body::-webkit-scrollbar {
@@ -32,18 +54,13 @@ body::-webkit-scrollbar {
 
 body {
   font-family: "Source Code Pro", monospace;
-  margin: 0 auto;
-  min-height: 100vh;
-  padding: 20px 0;
-  text-align: left;
+  /* margin: 0 auto;
+  padding: 20px 0; */
   background-color: #181825;
   line-height: 1.5;
   color: #cdd6f4;
   scrollbar-width: none;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 h2 {
