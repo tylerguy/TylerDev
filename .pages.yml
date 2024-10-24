@@ -27,7 +27,7 @@ content:
             description: The source of the image
             type: image
             options:
-              input: src/assets/content/media
+              input: src/content/media
               output: ../media
               path: src/assets
           - name: alt
@@ -49,7 +49,7 @@ content:
             description: The source of the screenshot
             type: image
             options:
-              input: src/assets/content/media
+              input: src/content/media
               output: ../media
               path: src/assets
           - name: alt
