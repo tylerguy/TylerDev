@@ -3,7 +3,7 @@ title: Infinite Care
 description: Web Design
 image:
   alt: Infinite Care logo
-  url: "../media/logo-square.png"
+  url: ../media/logo-square.png
 screenshots:
   - url: ../media/Screenshot 2024-07-30 093911.png
     alt: home page

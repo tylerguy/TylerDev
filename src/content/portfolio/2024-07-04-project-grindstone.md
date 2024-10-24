@@ -2,7 +2,7 @@
 title: Project Grindstone
 description: Web Design/Marketing
 image:
-  url: "../media/concept discord logo.png"
+  url: ../media/concept discord logo.png
   alt: Project Grindstone
 link: https://web.archive.org/web/20220928041811/https://projectgrindstone.net/
 screenshots:

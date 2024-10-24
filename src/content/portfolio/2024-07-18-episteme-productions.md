@@ -2,7 +2,7 @@
 title: Episteme Productions
 description: Web Design
 image:
-  url: "../media/Episteme_Graphics_Logo_Primary Logo 1.png"
+  url: ../media/Episteme_Graphics_Logo_Primary Logo 1.png
   alt: episteme logo
 screenshots:
   - url: ../media/Screenshot 2024-07-30 102802.png
