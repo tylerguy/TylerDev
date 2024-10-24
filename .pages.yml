@@ -29,7 +29,7 @@ content:
             options:
               input: src/content/media
               output: ../media
-              path: src/assets
+              path: src/content/media
           - name: alt
             label: Alt
             description: The alt text of the image
@@ -51,7 +51,7 @@ content:
             options:
               input: src/content/media
               output: ../media
-              path: src/assets
+              path: src/content/media
           - name: alt
             label: Alt
             description: The alt text of the screenshot
