@@ -14,7 +14,7 @@ import { Image } from "astro:assets";
         allPosts.map((post) => (
           <div
             id="card"
-            onclick={`location.href='/portfolio/${post.slug}'`}
+            onclick={`location.href='/portfolio/${post.id}'`}
             style="cursor: pointer;"
           >
             {() => {
@@ -31,7 +31,7 @@ import { Image } from "astro:assets";
                 );
               }
             }}
-            <hr/>
+            <hr />
             <div id="card-content">
               <h2>{post.data.title}</h2>
               <p>{post.data.description}</p>
@@ -74,7 +74,7 @@ import { Image } from "astro:assets";
 
   #card:hover {
     scale: 1.1;
-    transition: 0.5s;;
+    transition: 0.5s;
     border: 3px solid #ccc;
     background-color: #45475a;
   }
@@ -104,8 +104,8 @@ import { Image } from "astro:assets";
   }
 
   hr {
-    border: 1px solid #ffffff61;  
+    border: 1px solid #ffffff61;
     width: 100%;
     margin: 1rem 0;
   }
-  </style>
+</style>
