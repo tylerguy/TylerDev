@@ -60,7 +60,18 @@ content:
     label: Blog
     path: src/content/blog
     type: collection
+    view: 
+      fields: [title, description, id, pubDate]
+      primary: id
+      sort: [pubDate]
+    filename: '{primary}.md'
     fields:
+      - name: id
+        label: id
+        description: The ID of the blog post
+        type: text
+        required: true
+        unique: true
       - name: title
         label: Title
         description: The title of the blog post
