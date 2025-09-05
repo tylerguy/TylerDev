@@ -56,6 +56,35 @@ content:
             label: Alt
             description: The alt text of the screenshot
             type: text
+  - name: blog
+    label: Blog
+    path: src/content/blog
+    type: collection
+    fields:
+      - name: title
+        label: Title
+        description: The title of the blog post
+        type: text
+      - name: description
+        label: Description
+        description: The description of the blog post
+        type: rich-text
+      - name: body
+        label: Body
+        description: The body of the blog post
+        type: rich-text
+      - name: coverimage
+        label: Cover Image
+        description: The cover image of the blog post
+        type: image
+        options:
+          input: src/content/media
+          output: ../media
+          path: src/content/media
+      - name: pubDate
+        label: Publication Date
+        description: The date the blog post was published
+        type: date       
   # - name: about
   #   label: About
   #   path: src/content/about/about.md
