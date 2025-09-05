@@ -22,7 +22,7 @@ const portfolioCollection = defineCollection({
 });
 
 const blogCollection = defineCollection({
-  loader: glob({ pattern: "**/[^_]*.mdx", base: "./src/content/blog" }),
+  loader: glob({ pattern: "**/[^_]*.md", base: "./src/content/blog" }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
