@@ -15,44 +15,6 @@ import { ViewTransitions } from "astro:transitions";
     <Header title={SITE_TITLE} data-header />
     <slot />
     <img src="https://ipv4.quest/claim?name=tylerdev.space" hidden="" style="display: none">
-    <!-- <Footer /> -->
+    <Footer />
   </body>
 </html>
-
-<script>
-  const header: any = document.querySelector("[data-header]");
-
-  const content: any = document.getElementById("container");
-
-  function expandHeader() {
-    header.style.backgroundColor = "#45475a";
-    header.style.minWidth = "250px";
-    header.style.transition = "all 0.5s";
-    header.style.boxShadow = "5px 0px rgb(255 255 255 / 10%)";
-    content.style.transition = "all 0.5s";
-    content.style.opacity = "0.5";
-  }
-
-  function shrinkHeader() {
-    header.style.backgroundColor = "#313244";
-    header.style.minWidth = "200px";
-    header.style.transition = "all 0.5s";
-    header.style.boxShadow = "0px 0px rgb(255 255 255 / 10%)";
-    content.style.transition = "all 0.5s";
-    content.style.opacity = "1";
-  }
-
-  var delay = function (elem) {
-    var timeout: any = null;
-    elem.onmouseenter = function () {
-      timeout = setTimeout(expandHeader, 250);
-    };
-
-    elem.onmouseleave = function () {
-      clearTimeout(timeout);
-      shrinkHeader();
-    };
-  };
-
-  delay(document.querySelector("[data-header]"));
-</script>

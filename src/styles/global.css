@@ -24,7 +24,7 @@
 @media only screen and (min-width: 600px) {
   body {
     max-width: 100%;
-    flex-direction: row;
+    flex-direction: column;
     min-height: 100vh;
     height: 100%;
     text-align: left;
@@ -54,13 +54,11 @@ body::-webkit-scrollbar {
 
 body {
   font-family: "Source Code Pro", monospace;
-  /* margin: 0 auto;
-  padding: 20px 0; */
+  margin: 0 auto;
   background-color: #181825;
   line-height: 1.5;
   color: #cdd6f4;
   scrollbar-width: none;
-  display: flex;
 }
 
 h2 {
@@ -97,7 +95,6 @@ code {
 #favicon {
   width: 100px;
   height: 100px;
-  box-shadow: -5px 5px rgb(255 255 255 / 10%);
 }
 
 li {

@@ -1,14 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import courierclashimage from "../content/media/courierclash.png";
+import deadonarrivalimage from "../content/media/deadonarrival.png";
+import investigationtalesimage from "../content/media/investigationtales.png";
+import chickenattackimage from "../content/media/chickenattack.png";
 ---
 
 <Layout title="TylerDev | Home">
-  <div id="container">
-    <div id="content">
-      <h2 style="text-align: center;">
+  <h2 style="text-align: center;">
         Hey there, I'm Tyler. Former game design student and web design
         enthusiast
       </h2>
+  <div id="container">
+    
+    <div id="content">
       <p>Some projects i've been apart of:</p>
       <ul>
         <li>
@@ -39,9 +45,9 @@ import Layout from "../layouts/Layout.astro";
           adjustments were needed.
         </li>
       </ul>
-
+      <p>Currently working on:</p>
       <ul>
-        <p>Currently working on:</p>
+        
         <li>Expanding my knowledge of ReactJS and full stack development.</li>
         <li>
           Maintainer of several repositories for <a
@@ -52,35 +58,69 @@ import Layout from "../layouts/Layout.astro";
           Currently partaking in a creative gaming bootcamp delivered by YTKO
       </ul>
     </div>
+    <div id="showcase">
+      <Image src={courierclashimage} alt="Courier Clash" width={500}, height={500} class="image" />
+      <Image src={deadonarrivalimage} alt="Dead on Arrival" width={500}, height={500} class="image"/>
+      <Image src={investigationtalesimage} alt="Investigation Tales" width={500}, height={500} class="image"/>
+      <Image src={chickenattackimage} alt="Chicken Attack" width={500}, height={500} class="image"/> 
+    </div>
   </div>
 </Layout>
 
 <style>
   #container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    padding: 0 20px;
+    padding: 25px 50px;
   }
   #content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
+    align-items: start;
+    flex: 2;
+    padding: 10px;
+  }
+
+  #showcase {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    flex: 1;
+    padding: 10px;
+    max-height: 500px;
+    /* make scrollable */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    scrollbar-color: transparent transparent;
+  }
+
+  #showcase::-webkit-scrollbar {
+    display: none;
+
   }
   li {
     margin: 0.25rem;
-    text-align: center;
-    list-style-position: inside;
+    text-align: left;
   }
 
   ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
   }
 
   p {
     font-weight: bold;
   }
+
+  .image {
+    margin: 10px;
+    border: 3px white solid;
+    border-radius: 10px;
+  }
+
 </style>

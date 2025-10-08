@@ -1,17 +1,53 @@
 ---
 const today = new Date();
+import { FaXTwitter } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import { IoDocumentTextSharp } from "react-icons/io5";
 ---
-
 <footer>
-  &copy; {today.getFullYear()}
-  <a
-    href="https://github.com/tylerguy"
-    style="color: white; font-weight:bold; text-decoration:none;">Tylerguy.</a
-  >
+      <nav id="Social-Header">
+      <a href="https://github.com/tylerguy" id="social-link">
+        <FaGithub />
+      </a>
+      <a href="mailto:tyler@tylerdev.space" id="social-link">
+        <IoIosMail />
+      </a>
+      <a
+        href="https://uk.linkedin.com/in/tyler-denman-23b412198"
+        id="social-link"
+      >
+        <FaLinkedinIn />
+      </a>
+      <a href="/cv.pdf" id="social-link">
+        <IoDocumentTextSharp />
+      </a>
+    </nav>
 </footer>
+
 <style>
   footer {
     padding: 25px;
     text-align: center;
+    background-color: #1e1e2e;
+  }
+
+  #Social-Header {
+    margin-top: 0.5em;
+  }
+
+  #social-link {
+    color: white;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+
+  #social-link:hover {
+    color: #bd93f9;
+    font-size: 25px;
+    transition:
+      font-size 0.25s,
+      color 0.1s;
   }
 </style>

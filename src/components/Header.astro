@@ -1,11 +1,7 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../config";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
-import { IoDocumentTextSharp } from "react-icons/io5";
+
 import siteIcon from "../assets/favicon.ico";
 ---
 
@@ -13,32 +9,10 @@ import siteIcon from "../assets/favicon.ico";
   <a href="/">
     <img src={siteIcon} alt="site icon" id="favicon" />
   </a>
-  <h1>
-    {SITE_TITLE}
-  </h1>
   <nav id="Main-Header">
-    <div class="expanded">
       <HeaderLink href="/">Home</HeaderLink>
       <!--<HeaderLink href="/blog">Blog</HeaderLink>-->
       <HeaderLink href="/portfolio">Portfolio</HeaderLink>
-    </div>
-      <nav id="Social-Header">
-      <a href="https://github.com/tylerguy" id="social-link">
-        <FaGithub />
-      </a>
-      <a href="mailto:tyler@tylerdev.space" id="social-link">
-        <IoIosMail />
-      </a>
-      <a
-        href="https://uk.linkedin.com/in/tyler-denman-23b412198"
-        id="social-link"
-      >
-        <FaLinkedinIn />
-      </a>
-      <a href="/cv.pdf" id="social-link">
-        <IoDocumentTextSharp />
-      </a>
-    </nav>
     <div class="hamburger">
       <span class="line"></span>
       <span class="line"></span>
@@ -58,72 +32,47 @@ import siteIcon from "../assets/favicon.ico";
 
   @media only screen and (min-width: 600px) {
     header {
-      flex-direction: column;
-      min-height: 100%;
-      height: 100%;
-      min-width: 200px;
-      padding: 0 5em;
+      flex-direction: row;
     }
   }
+
   header {
     display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: "Source Code Pro", monospace;
     background-color: #313244;
-  }
-
-  .expanded {
-    display: flex;
-    flex-direction: column;
-  }
-  img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 50px;
   }
 
   #favicon {
     aspect-ratio: 1/1;
+    width: 100px;
+    height: 100px;
+    border-radius: 30%;
+  }
+  
+  #favicon:hover {
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+    transform: scale(1.1);
   }
 
-  img:hover {
-    cursor: pointer;
-  }
   h1 {
     margin: 10px 0;
     padding: 0;
     font-size: 2em;
     color: #ffb86c;
   }
-  #Social-Header {
-    margin-top: 0.5em;
-  }
-  #social-link {
-    color: white;
-    text-decoration: none;
-    transition: all 0.25s;
-  }
-
-  #social-link:hover {
-    color: #bd93f9;
-    font-size: 25px;
-    transition:
-      font-size 0.25s,
-      color 0.1s;
-  }
+  
   #Main-Header {
-    margin: 0.5em 0;
     display: flex;
-    flex-direction: column;
-  }
-
-  #Social-Header {
-    margin: 0.5em 0;
+    flex-direction: row;
   }
 
   svg {
     font-size: 1.2em;
-    margin: 0 0em;
+    margin: 0;
   }
 </style>
