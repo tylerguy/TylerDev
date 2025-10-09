@@ -5,49 +5,39 @@ import { Image } from "astro:assets";
 ---
 
 <Layout>
-  <main>
-    <div id="container">
-      <div id="content">
-        <div class="header">
-          <h1>{frontmatter.title}</h1>
-          <div id="description">
-            <h3>{frontmatter.description}</h3>
-          </div>
-        </div>
-
-        <div id="article">
-          <slot />
-          {frontmatter.link ? <a href={frontmatter.link}>View Here</a> : null}
+  <div id="container">
+    <div id="content">
+      <div class="header">
+        <h1>{frontmatter.title}</h1>
+        <div id="description">
+          <h3>{frontmatter.description}</h3>
         </div>
       </div>
 
-      <div id="gallery">
-        <h2>Screenshots</h2>
-        <!-- parse the screenshots array -->
-        <div id="screenshots">
-          {
-            frontmatter.screenshots.map(
-              (screenshot: { url: string; alt: string }) => (
-                <div id="screenshot">
-                  <Image src={screenshot.url} alt={screenshot.alt} />
-                </div>
-              )
-            )
-          }
-        </div>
+      <div id="article">
+        <slot />
+        {frontmatter.link ? <a href={frontmatter.link}>View Here</a> : null}
       </div>
     </div>
-  </main>
+
+    <div id="gallery">
+      <h2>Screenshots</h2>
+      <!-- parse the screenshots array -->
+      <div id="screenshots">
+        {
+          frontmatter.screenshots.map(
+            (screenshot: { url: string; alt: string }) => (
+              <div id="screenshot">
+                <Image src={screenshot.url} alt={screenshot.alt} />
+              </div>
+            )
+          )
+        }
+      </div>
+    </div>
+  </div>
 
   <style>
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: #cdd6f4;
-      height: 100%;
-    }
-
     #container {
       display: flex;
     }
@@ -59,14 +49,13 @@ import { Image } from "astro:assets";
 
       #content {
         padding: 10px;
-      }
-
-      main {
-        overflow: scroll;
+        max-height: fit-content;
+        height: fit-content;
       }
 
       #screenshots {
         padding: 20px;
+        overflow: scroll;
       }
     }
 

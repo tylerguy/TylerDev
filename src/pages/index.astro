@@ -9,11 +9,9 @@ import chickenattackimage from "../content/media/chickenattack.png";
 
 <Layout title="TylerDev | Home">
   <h2 style="text-align: center;">
-        Hey there, I'm Tyler. Former game design student and web design
-        enthusiast
-      </h2>
+    Hey there, I'm Tyler. Former game design student and web design enthusiast
+  </h2>
   <div id="container">
-    
     <div id="content">
       <p>Some projects i've been apart of:</p>
       <ul>
@@ -34,8 +32,7 @@ import chickenattackimage from "../content/media/chickenattack.png";
           the game and making sure they were correctly implemented.
         </li>
         <li>
-          Game Designer for <a
-            href="https://tbgamestudio.itch.io/courier-clash"
+          Game Designer for <a href="https://tbgamestudio.itch.io/courier-clash"
             >Courier Clash</a
           >, a vehicle combat game set within a toy/childlike environment. My
           main responsibilities were to generate ideas for the game concept and
@@ -59,68 +56,116 @@ import chickenattackimage from "../content/media/chickenattack.png";
       </ul>
     </div>
     <div id="showcase">
-      <Image src={courierclashimage} alt="Courier Clash" width={500}, height={500} class="image" />
-      <Image src={deadonarrivalimage} alt="Dead on Arrival" width={500}, height={500} class="image"/>
-      <Image src={investigationtalesimage} alt="Investigation Tales" width={500}, height={500} class="image"/>
-      <Image src={chickenattackimage} alt="Chicken Attack" width={500}, height={500} class="image"/> 
+      <Image
+        src={courierclashimage}
+        alt="Courier Clash"
+        width={500}
+        ,
+        height={500}
+        class="image"
+      />
+      <Image
+        src={deadonarrivalimage}
+        alt="Dead on Arrival"
+        width={500}
+        ,
+        height={500}
+        class="image"
+      />
+      <Image
+        src={investigationtalesimage}
+        alt="Investigation Tales"
+        width={500}
+        ,
+        height={500}
+        class="image"
+      />
+      <Image
+        src={chickenattackimage}
+        alt="Chicken Attack"
+        width={500}
+        ,
+        height={500}
+        class="image"
+      />
     </div>
   </div>
 </Layout>
 
 <style>
-  #container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 25px 50px;
-  }
-  #content {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: start;
-    flex: 2;
-    padding: 10px;
+  @media only screen and (min-width: 600px) {
+    #container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 25px 50px;
+    }
+    #content {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: start;
+      flex: 2;
+      padding: 10px;
+    }
+
+    #showcase {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1;
+      padding: 10px;
+      max-height: 500px;
+      /* make scrollable */
+      overflow-y: scroll;
+      overflow-x: hidden;
+      scrollbar-width: none;
+      scrollbar-color: transparent transparent;
+    }
+
+    #showcase::-webkit-scrollbar {
+      display: none;
+    }
+    li {
+      margin: 0.25rem;
+      text-align: left;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    p {
+      font-weight: bold;
+    }
+
+    .image {
+      margin: 10px;
+      border: 3px white solid;
+      border-radius: 10px;
+    }
   }
 
-  #showcase {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
-    padding: 10px;
-    max-height: 500px;
-    /* make scrollable */
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scrollbar-width: none;
-    scrollbar-color: transparent transparent;
-  }
+  @media only screen and (max-width: 600px) {
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+      margin: 20px;
+      padding: 10px 0 25px 0; 
+    }
 
-  #showcase::-webkit-scrollbar {
-    display: none;
+    #content
+    {
+      padding: 0 0 25px 0;
+    }
 
-  }
-  li {
-    margin: 0.25rem;
-    text-align: left;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-
-  p {
-    font-weight: bold;
-  }
-
-  .image {
-    margin: 10px;
-    border: 3px white solid;
-    border-radius: 10px;
-  }
-
+    ul li {
+      margin: 0.25rem;
+      text-align: left;
+    }
 </style>
