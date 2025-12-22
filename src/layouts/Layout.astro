@@ -3,7 +3,6 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -14,7 +13,11 @@ import { ViewTransitions } from "astro:transitions";
   <body>
     <Header title={SITE_TITLE} data-header />
     <slot />
-    <img src="https://ipv4.quest/claim?name=tylerdev.space" hidden="" style="display: none">
+    <img
+      src="https://ipv4.quest/claim?name=tylerdev.space"
+      hidden=""
+      style="display: none"
+    />
     <Footer />
   </body>
 </html>

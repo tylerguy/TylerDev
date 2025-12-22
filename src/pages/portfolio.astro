@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 const allPosts = await getCollection("portfolio");
 import { Image } from "astro:assets";
+import { navigate } from "astro:transitions/client";
 ---
 
 <Layout>
@@ -12,11 +13,7 @@ import { Image } from "astro:assets";
       <!-- Loop through all posts -->
       {
         allPosts.map((post) => (
-          <div
-            id="card"
-            onclick={`location.href='/portfolio/${post.id}'`}
-            style="cursor: pointer;"
-          >
+          <div id="card" style="cursor: pointer;" data-post-id={post.id}>
             {() => {
               if (!post.data.image) {
                 return (
@@ -27,7 +24,11 @@ import { Image } from "astro:assets";
                 );
               } else {
                 return (
-                  <Image src={post.data.image.url} alt={post.data.image.alt} />
+                  <Image
+                    src={post.data.image.url}
+                    alt={post.data.image.alt}
+                    loading={"eager"}
+                  />
                 );
               }
             }}
@@ -48,8 +49,7 @@ import { Image } from "astro:assets";
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0;
-    margin: 0 auto;
+    padding: 25px 50px;
   }
 
   #projects {
@@ -109,3 +109,15 @@ import { Image } from "astro:assets";
     margin: 1rem 0;
   }
 </style>
+
+<script>
+  import { navigate } from "astro:transitions/client";
+  document.addEventListener("astro:page-load", () => {
+    document.querySelectorAll("#card").forEach((card) => {
+      card.addEventListener("click", () => {
+        const postId = card.getAttribute("data-post-id");
+        navigate(`/portfolio/${postId}`);
+      });
+    });
+  });
+</script>

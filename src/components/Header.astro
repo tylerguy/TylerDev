@@ -1,13 +1,20 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../config";
-
-import siteIcon from "../assets/favicon.ico";
+import { Image } from "astro:assets";
+import siteIcon from "../content/media/favicon.ico";
 ---
 
 <header data-header transition:persist>
   <a href="/">
-    <img src={siteIcon} alt="site icon" id="favicon" />
+    <Image
+      src={siteIcon}
+      width={500}
+      height={500}
+      alt="site icon"
+      id="favicon"
+      loading="eager"
+    />
   </a>
   <nav id="Main-Header">
     <HeaderLink href="/">Home</HeaderLink>
@@ -61,6 +68,11 @@ import siteIcon from "../assets/favicon.ico";
     cursor: pointer;
     transition: ease-in-out 0.5s;
     transform: scale(1.1);
+  }
+
+  #favicon:not(:hover) {
+    transition: ease-in-out 0.5s;
+    transform: scale(1);
   }
 
   h1 {

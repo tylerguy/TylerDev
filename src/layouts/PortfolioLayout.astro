@@ -28,7 +28,7 @@ import { Image } from "astro:assets";
           frontmatter.screenshots.map(
             (screenshot: { url: string; alt: string }) => (
               <div id="screenshot">
-                <Image src={screenshot.url} alt={screenshot.alt} />
+                <Image src={screenshot.url} alt={screenshot.alt} inferSize />
               </div>
             )
           )
@@ -45,6 +45,7 @@ import { Image } from "astro:assets";
     @media only screen and (min-width: 600px) {
       #container {
         flex-direction: row;
+        padding: 25px 40px;
       }
 
       #content {
