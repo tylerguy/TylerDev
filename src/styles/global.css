@@ -25,8 +25,6 @@
   body {
     max-width: 100%;
     flex-direction: column;
-    min-height: 100vh;
-    height: 100%;
     text-align: left;
     justify-content: center;
     align-items: center;
@@ -59,6 +57,8 @@ body {
   line-height: 1.5;
   color: #cdd6f4;
   scrollbar-width: none;
+  display: flex;
+  min-height: 100vh;
 }
 
 h2 {
@@ -78,6 +78,7 @@ b {
 a {
   color: #89b4fa;
 }
+
 nav a {
   margin-right: 10px;
 }
@@ -109,7 +110,7 @@ ul {
   align-items: center;
 }
 
-li > p {
+li>p {
   padding: 0.25rem;
   margin: 0;
 }
