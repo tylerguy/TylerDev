@@ -57,7 +57,7 @@ body {
   line-height: 1.5;
   color: #cdd6f4;
   scrollbar-width: none;
-  display: flex;
+  /* display: flex; */
   min-height: 100vh;
 }
 
